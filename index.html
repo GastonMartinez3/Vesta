@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.js"></script>
 
     <title>Vesta</title>
 </head>
@@ -155,6 +156,15 @@
 
 <!--                 CONTACTO            -->
 
+    <!-- <div class="modal_wrap">
+        <div class="mensaje_modal">
+            <h3>Errores encontrados</h3>
+            <p>Escriba un nombre</p>
+            <p>Ingrese un correo</p>
+            <p>Escriba un mensaje</p>
+            <span id="btnClose">Cerrar</span>
+        </div>
+    </div> -->
         
     <div class="pt-3">
 
@@ -164,30 +174,30 @@
         </div>
 
         <div id="contact-form" class="container d-flex justify-content-center pt-4">
-            <form action="https://formsubmit.co/gastonmartinezeq@gmail.com" method="POST">
+            <form action="form-send.php" method="post">
                 <div class="form-row pb-2">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Nombre">
+                        <input type="text" class="form-control" placeholder="Nombre" id="name" name="name" required>
                     </div>
                     <div class="col">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
                     </div>
                 </div>
                 <div class="form-row pb-2">
                     <div class="col">
-                        <input type="tel" class="form-control" placeholder="Teléfono">
+                        <input type="tel" class="form-control" placeholder="Teléfono" id="phone" name="phone">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Asunto">
+                        <input type="text" class="form-control" placeholder="Asunto" id="subject" name="subject">
                     </div>
                 </div>
                 <div class="form-row pb-2">
                     <div class="col">
-                        <textarea class="form-control" rows="5" placeholder="Mensaje"></textarea>
+                        <textarea class="form-control" rows="5" placeholder="Mensaje" id="menssage" name="menssage" required></textarea>
                     </div>                   
                 </div>
                 <div id="btn-form" class="col-md-12 text-center pt-3 pb-5">
-                    <button type="submit" class="btn btn-light">Enviar</button>
+                    <button id="btnSend" type="submit" class="btn btn-light">Enviar</button>
                 </div>
               </form>        
         </div>

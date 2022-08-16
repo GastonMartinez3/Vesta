@@ -1,3 +1,119 @@
+$(document).ready(function(){
+  
+  $('#btnSend').click(function(){
+
+    var errores = '';
+
+  // Validacion nombre ======================
+
+  if( $('#name').val() == '' ){
+    errores += '<p>Escriba un nombre</p>'
+    $('#name').css("border-color", "#F14B4B")
+  } else{
+    $('#name').css("border-color", "#d1d1d1")
+  }
+
+  // Validacion correo ======================
+
+  if( $('#email').val() == '' ){
+    errores += '<p>Ingrese un correo electronico</p>'
+    $('#email').css("border-color", "#F14B4B")
+  } else{
+    $('#email').css("border-color", "#d1d1d1")
+  }
+  
+  // Validacion Mensaje ======================
+
+  if( $('#menssage').val() == '' ){
+    errores += '<p>Escriba un mensaje</p>'
+    $('#menssage').css("border-color", "#F14B4B")
+  } else{
+    $('#menssage').css("border-color", "#d1d1d1")
+  }
+
+  // ENVIANDO MENSAJE =======================
+
+  if( errores == '' == false){
+    var mensajeModal = '<div class="modal_wrap">'+
+                            '<div class="mensaje_modal">'+
+                                '<h3>Errores encontrados</h3>'+
+                                errores+
+                                '<span id="btnClose">Cerrar</span>'+      
+                            '</div>'+
+                        '</div>'
+    $('body').append(mensajeModal);
+  }
+
+  // CERRANDO MODAL =========================
+
+  $('#btnClose').click(function(){
+    $('.modal_wrap').remove();
+  });
+
+  })
+
+  
+
+});
+
+$(document).ready(function(){
+  
+  $('#btnSenden').click(function(){
+
+    var errores = '';
+
+  // Validacion nombre ======================
+
+  if( $('#name').val() == '' ){
+    errores += '<p>Put your name</p>'
+    $('#name').css("border-color", "#F14B4B")
+  } else{
+    $('#name').css("border-color", "#d1d1d1")
+  }
+
+  // Validacion correo ======================
+
+  if( $('#email').val() == '' ){
+    errores += '<p>Complete your email</p>'
+    $('#email').css("border-color", "#F14B4B")
+  } else{
+    $('#email').css("border-color", "#d1d1d1")
+  }
+  
+  // Validacion Mensaje ======================
+
+  if( $('#menssage').val() == '' ){
+    errores += '<p>Write a menssage</p>'
+    $('#menssage').css("border-color", "#F14B4B")
+  } else{
+    $('#menssage').css("border-color", "#d1d1d1")
+  }
+
+  // ENVIANDO MENSAJE =======================
+
+  if( errores == '' == false){
+    var mensajeModal = '<div class="modal_wrap">'+
+                            '<div class="mensaje_modal">'+
+                                '<h3>Missing information</h3>'+
+                                errores+
+                                '<span id="btnClose">Close</span>'+      
+                            '</div>'+
+                        '</div>'
+    $('body').append(mensajeModal);
+  }
+
+  // CERRANDO MODAL =========================
+
+  $('#btnClose').click(function(){
+    $('.modal_wrap').remove();
+  });
+
+  })
+
+  
+
+});
+
 var check=document.querySelector(".check");
 check.addEventListener('click',idioma);
 
