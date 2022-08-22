@@ -1,11 +1,13 @@
 <?php
 
 // LLAMANDO A LOS CAMPOS =========================
+$from = "BeVesta Contacto Web";
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $subject = $_POST['subject'];
 $menssage = $_POST['menssage'];
+$headers = "From:" . $from;
 
 // DATOS PARA EL CORREO ===========================
 
@@ -20,7 +22,7 @@ $carta .= "Mensaje: $menssage";
 
 // ENVIANDO MENSAJE ==============================
 
-mail($destinatario, $subject, $carta);
+mail($destinatario, $subject, $carta, $headers);
 header('location:form-confirm.html')
 
 
