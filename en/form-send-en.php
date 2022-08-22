@@ -18,7 +18,7 @@ $mensaje .= "Teléfono: " . $telefono . " \r\n";
 $mensaje .= "Mensaje: " . $empresa . " \r\n";
 $mensaje .= "Enviado el " . date('d/m/Y', time());
 
-$para = 'info@bevesta.com.ar';
+$para = 'paugarcia@bevesta.com.ar';
 $asunto = 'Mensaje del formulario web BeVesta';
 
 if (mail($para, $asunto, utf8_decode($mensaje), $header))
