@@ -22,7 +22,7 @@ $carta .= "Mensaje: $menssage";
 
 // ENVIANDO MENSAJE ==============================
 
-mail($destinatario, $subject, $carta, $headers);
+mail($destinatario, $subject, $carta);
 header('location:form-confirm.html')
 
 
